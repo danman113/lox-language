@@ -1,7 +1,7 @@
 # Lox Language
 Syntax highlighting for [everyone's favorite interpreted learning-language](https://craftinginterpreters.com/the-lox-language.html)!
 
-\!\[Screenshot\]\(images/screenshot.png\)
+![Screenshot](images/screenshot.png)
 
 ## What is Lox?
 
