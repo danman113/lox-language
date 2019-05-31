@@ -5,6 +5,7 @@
   "version": "0.0.1",
   "publisher": "dberezin",
   "author": "dberezin",
+  "icon": "images/CILogo.png",
   "engines": {
       "vscode": "^1.24.0"
   },
