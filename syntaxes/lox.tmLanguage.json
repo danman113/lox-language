@@ -1,0 +1,161 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "lox",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#statements"
+		},
+		{
+			"include": "#callables"
+		},
+		{
+			"include": "#ident"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#digits"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.lox",
+					"match": "\\b(if|while|for|return)\\b"
+				},
+				{
+					"name": "constant.language.null.lox",
+					"match": "\\b(nil)\\b"
+				},
+				{
+					"name": "support.function.builtin.lox",
+					"match": "\\b(print)\\b"
+				},
+				{
+					"name": "variable.language.this.lox",
+					"match": "\\b(this)\\b"
+				},
+				{
+					"name": "variable.language.super.lox",
+					"match": "\\b(super)\\b"
+				}
+			]
+		},
+		"statements": {
+			"patterns": [
+				{
+					"match": "\\b(var)\\s*([A-Za-z_][A-Za-z0-9_]*)\\b",
+					"captures": {
+						"1": {
+							"name": "storage.type.lox"
+						},
+						"2": {
+							"name": "support.variable.lox"
+						}
+					}
+				},
+				{
+					"match": "\\b(fun)\\s*([A-Za-z_][A-Za-z0-9_]*)\\s*\\(([A-Za-z0-9,\\s]*)\\)\\s*{",
+					"captures": {
+						"1": {
+							"name":"storage.type.function.lox"
+						},
+						"2": {
+							"name":"entity.name.function.lox"
+						},
+						"3": {
+							"patterns": [
+								{
+									"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+									"name": "variable.parameter.lox"
+								}
+							]
+						}
+					}
+				},
+				{
+					"match": "\\b(class)\\s*([A-Za-z_][A-Za-z0-9_]*)(?:\\s*(<)\\s*([A-Za-z_][A-Za-z0-9_]*))?\\b",
+					"captures": {
+						"1": {
+							"name": "storage.type.class.lox"
+						},
+						"2": {
+							"name": "entity.name.type.class.lox"
+						},
+						"3": {
+							"name": "storage.modifier.lox"
+						},
+						"4": {
+							"name": "entity.name.type.class.lox"
+						}
+					}
+				}
+			]
+		},
+		"callables": {
+			"patterns": [
+				{
+					"match": "([A-Za-z_][A-Za-z0-9_]*)\\(([A-Za-z0-9,\\s]*)\\)",
+					"captures": {
+						"1": {
+							"name": "support.function.lox"
+						},
+						"2": {
+							"patterns": [
+								{
+									"name":"variable.parameter.lox",
+									"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+								},
+								{
+									"include": "#strings"
+								},
+								{
+									"include": "#digits"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.lox",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": []
+		},
+		"digits": {
+			"patterns": [
+				{
+					"name": "constant.numeric.lox",
+					"match": "\\b[0-9]+(?:.[0-9]+)?\\b"
+				}
+			]
+		},
+		"ident": {
+			"patterns": [
+				{
+					"name": "variable.other.readwrite.lox",
+					"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.lox",
+					"match": "\\/\\/.*"
+				}
+			]
+		}
+	},
+	"scopeName": "source.lox"
+}
