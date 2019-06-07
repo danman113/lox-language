@@ -2,7 +2,7 @@
   "name": "lox-language",
   "displayName": "Lox Language",
   "description": "Syntax highlighting for everyone's favorite interpreted learning-language",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "dberezin",
   "author": "dberezin",
   "icon": "images/CILogo.png",
