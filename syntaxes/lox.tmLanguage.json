@@ -29,7 +29,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.lox",
-					"match": "\\b(if|while|for|return)\\b"
+					"match": "\\b(if|else|while|for|return|and|or)\\b"
 				},
 				{
 					"name": "constant.language.null.lox",
@@ -52,7 +52,7 @@
 		"statements": {
 			"patterns": [
 				{
-					"match": "\\b(var)\\s*([A-Za-z_][A-Za-z0-9_]*)\\b",
+					"match": "\\b(var)\\s+([A-Za-z_][A-Za-z0-9_]*)\\b",
 					"captures": {
 						"1": {
 							"name": "storage.type.lox"
@@ -63,7 +63,7 @@
 					}
 				},
 				{
-					"match": "\\b(fun)\\s*([A-Za-z_][A-Za-z0-9_]*)\\s*\\(([A-Za-z0-9,\\s]*)\\)\\s*{",
+					"match": "\\b(fun)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*\\(([A-Za-z0-9,\\s]*)\\)",
 					"captures": {
 						"1": {
 							"name":"storage.type.function.lox"
@@ -82,7 +82,7 @@
 					}
 				},
 				{
-					"match": "\\b(class)\\s*([A-Za-z_][A-Za-z0-9_]*)(?:\\s*(<)\\s*([A-Za-z_][A-Za-z0-9_]*))?\\b",
+					"match": "\\b(class)\\s+([A-Za-z_][A-Za-z0-9_]*)(?:\\s*(<)\\s*([A-Za-z_][A-Za-z0-9_]*))?\\b",
 					"captures": {
 						"1": {
 							"name": "storage.type.class.lox"
@@ -103,7 +103,7 @@
 		"callables": {
 			"patterns": [
 				{
-					"match": "([A-Za-z_][A-Za-z0-9_]*)\\(([A-Za-z0-9,\\s]*)\\)",
+					"match": "([A-Za-z_][A-Za-z0-9_]*)\\(([^\\)]*)\\)",
 					"captures": {
 						"1": {
 							"name": "support.function.lox"
