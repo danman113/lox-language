@@ -103,26 +103,8 @@
 		"callables": {
 			"patterns": [
 				{
-					"match": "([A-Za-z_][A-Za-z0-9_]*)\\(([^\\)]*)\\)",
-					"captures": {
-						"1": {
-							"name": "support.function.lox"
-						},
-						"2": {
-							"patterns": [
-								{
-									"name":"variable.parameter.lox",
-									"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
-								},
-								{
-									"include": "#strings"
-								},
-								{
-									"include": "#digits"
-								}
-							]
-						}
-					}
+					"match": "([A-Za-z_][A-Za-z0-9_]*)\\(",
+					"name": "support.function.lox"
 				}
 			]
 		},
