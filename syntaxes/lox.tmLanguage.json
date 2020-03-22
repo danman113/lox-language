@@ -36,6 +36,10 @@
 					"match": "\\b(nil)\\b"
 				},
 				{
+					"name": "constant.language.boolean.lox",
+					"match": "\\b(true|false)\\b"
+				},
+				{
 					"name": "support.function.builtin.lox",
 					"match": "\\b(print)\\b"
 				},
