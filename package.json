@@ -1,44 +1,53 @@
 {
-  "name": "lox-language",
-  "displayName": "Lox Language",
-  "description": "Syntax highlighting for everyone's favorite interpreted learning-language",
-  "version": "0.0.3",
-  "publisher": "dberezin",
-  "author": "dberezin",
-  "icon": "images/CILogo.png",
-  "engines": {
-      "vscode": "^1.24.0"
-  },
-  "categories": [
-      "Programming Languages"
-  ],
-  "contributes": {
-      "languages": [{
-          "id": "lox",
-          "aliases": ["lox", "lox"],
-          "extensions": [".lox"],
-          "configuration": "./language-configuration.json"
-      }],
-      "grammars": [{
-          "language": "lox",
-          "scopeName": "source.lox",
-          "path": "./syntaxes/lox.tmLanguage.json"
-      }]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/danman113/lox-language.git"
-  },
-  "keywords": [
-    "lox",
-    "lox-language",
-    "vscode",
-    "vscode-extension",
-    "vscode-language"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/danman113/lox-language/issues"
-  },
-  "homepage": "https://github.com/danman113/lox-language#readme"
+    "name": "lox-language",
+    "displayName": "Lox Language",
+    "description": "Syntax highlighting for everyone's favorite interpreted learning-language",
+    "version": "0.0.4",
+    "publisher": "dberezin",
+    "author": "dberezin",
+    "icon": "images/CILogo.png",
+    "engines": {
+        "vscode": "^1.24.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "lox",
+                "aliases": [
+                    "lox",
+                    "lox"
+                ],
+                "extensions": [
+                    ".lox"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "lox",
+                "scopeName": "source.lox",
+                "path": "./syntaxes/lox.tmLanguage.json"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/danman113/lox-language.git"
+    },
+    "keywords": [
+        "lox",
+        "lox-language",
+        "vscode",
+        "vscode-extension",
+        "vscode-language"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/danman113/lox-language/issues"
+    },
+    "homepage": "https://github.com/danman113/lox-language#readme"
 }

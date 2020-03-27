@@ -1,4 +1,6 @@
 # Change Log
+## 0.0.4 - 2020-03-26
+- Added boolean highlighting thanks to johnchabot2013@gmail.com
 
 ## 0.0.3 - 2019-06-07
 - Fixed issue with recursive function calls.
