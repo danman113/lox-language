@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "lox",
+	"name": "hyde",
 	"patterns": [
 		{
 			"include": "#comments"
@@ -28,27 +28,27 @@
 		"keywords": {
 			"patterns": [
 				{
-					"name": "keyword.control.lox",
+					"name": "keyword.control.hyde",
 					"match": "\\b(if|else|while|for|return|and|or)\\b"
 				},
 				{
-					"name": "constant.language.null.lox",
+					"name": "constant.language.null.hyde",
 					"match": "\\b(nil)\\b"
 				},
 				{
-					"name": "constant.language.boolean.lox",
+					"name": "constant.language.boolean.hyde",
 					"match": "\\b(true|false)\\b"
 				},
 				{
-					"name": "support.function.builtin.lox",
+					"name": "support.function.builtin.hyde",
 					"match": "\\b(print)\\b"
 				},
 				{
-					"name": "variable.language.this.lox",
+					"name": "variable.language.this.hyde",
 					"match": "\\b(this)\\b"
 				},
 				{
-					"name": "variable.language.super.lox",
+					"name": "variable.language.super.hyde",
 					"match": "\\b(super)\\b"
 				}
 			]
@@ -59,10 +59,10 @@
 					"match": "\\b(var)\\s+([A-Za-z_][A-Za-z0-9_]*)\\b",
 					"captures": {
 						"1": {
-							"name": "storage.type.lox"
+							"name": "storage.type.hyde"
 						},
 						"2": {
-							"name": "support.variable.lox"
+							"name": "support.variable.hyde"
 						}
 					}
 				},
@@ -70,16 +70,16 @@
 					"match": "\\b(fun)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*\\(([A-Za-z0-9,\\s]*)\\)",
 					"captures": {
 						"1": {
-							"name":"storage.type.function.lox"
+							"name":"storage.type.function.hyde"
 						},
 						"2": {
-							"name":"entity.name.function.lox"
+							"name":"entity.name.function.hyde"
 						},
 						"3": {
 							"patterns": [
 								{
 									"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
-									"name": "variable.parameter.lox"
+									"name": "variable.parameter.hyde"
 								}
 							]
 						}
@@ -89,16 +89,16 @@
 					"match": "\\b(class)\\s+([A-Za-z_][A-Za-z0-9_]*)(?:\\s*(<)\\s*([A-Za-z_][A-Za-z0-9_]*))?\\b",
 					"captures": {
 						"1": {
-							"name": "storage.type.class.lox"
+							"name": "storage.type.class.hyde"
 						},
 						"2": {
-							"name": "entity.name.type.class.lox"
+							"name": "entity.name.type.class.hyde"
 						},
 						"3": {
-							"name": "storage.modifier.lox"
+							"name": "storage.modifier.hyde"
 						},
 						"4": {
-							"name": "entity.name.type.class.lox"
+							"name": "entity.name.type.class.hyde"
 						}
 					}
 				}
@@ -108,12 +108,12 @@
 			"patterns": [
 				{
 					"match": "([A-Za-z_][A-Za-z0-9_]*)\\(",
-					"name": "support.function.lox"
+					"name": "support.function.hyde"
 				}
 			]
 		},
 		"strings": {
-			"name": "string.quoted.double.lox",
+			"name": "string.quoted.double.hyde",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": []
@@ -121,7 +121,7 @@
 		"digits": {
 			"patterns": [
 				{
-					"name": "constant.numeric.lox",
+					"name": "constant.numeric.hyde",
 					"match": "\\b[0-9]+(?:.[0-9]+)?\\b"
 				}
 			]
@@ -129,7 +129,7 @@
 		"ident": {
 			"patterns": [
 				{
-					"name": "variable.other.readwrite.lox",
+					"name": "variable.other.readwrite.hyde",
 					"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
 				}
 			]
@@ -137,11 +137,11 @@
 		"comments": {
 			"patterns": [
 				{
-					"name": "comment.line.double-slash.lox",
-					"match": "\\/\\/.*"
+					"name": "comment.line.pound.hyde",
+					"match": "#.*"
 				}
 			]
 		}
 	},
-	"scopeName": "source.lox"
+	"scopeName": "source.hyde"
 }

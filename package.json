@@ -1,10 +1,10 @@
 {
-    "name": "lox-language",
-    "displayName": "Lox Language",
-    "description": "Syntax highlighting for everyone's favorite interpreted learning-language",
-    "version": "0.0.4",
-    "publisher": "dberezin",
-    "author": "dberezin",
+    "name": "hyde-language",
+    "displayName": "Hyde Language",
+    "description": "Syntax highlighting for Hyde, a Python interpretation of Lox",
+    "version": "0.0.5",
+    "publisher": "ty-porter",
+    "author": "ty-porter",
     "icon": "images/CILogo.png",
     "engines": {
         "vscode": "^1.24.0"
@@ -15,39 +15,40 @@
     "contributes": {
         "languages": [
             {
-                "id": "lox",
+                "id": "hyde",
                 "aliases": [
-                    "lox",
-                    "lox"
+                    "hy",
+                    "hyde"
                 ],
                 "extensions": [
-                    ".lox"
+                    ".hy",
+                    ".hyde"
                 ],
                 "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "lox",
-                "scopeName": "source.lox",
-                "path": "./syntaxes/lox.tmLanguage.json"
+                "language": "hyde",
+                "scopeName": "source.hyde",
+                "path": "./syntaxes/hyde.tmLanguage.json"
             }
         ]
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/danman113/lox-language.git"
+        "url": "https://github.com/ty-porter/hyde-lang.git"
     },
     "keywords": [
-        "lox",
-        "lox-language",
+        "hyde",
+        "hyde-language",
         "vscode",
         "vscode-extension",
         "vscode-language"
     ],
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/danman113/lox-language/issues"
+        "url": "https://github.com/ty-porter/hyde-lang/issues"
     },
-    "homepage": "https://github.com/danman113/lox-language#readme"
+    "homepage": "https://github.com/ty-porter/hyde-lang"
 }
