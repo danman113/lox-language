@@ -33,11 +33,11 @@
 				},
 				{
 					"name": "constant.language.null.hyde",
-					"match": "\\b(nil)\\b"
+					"match": "\\b(None)\\b"
 				},
 				{
 					"name": "constant.language.boolean.hyde",
-					"match": "\\b(true|false)\\b"
+					"match": "\\b(True|False)\\b"
 				},
 				{
 					"name": "support.function.builtin.hyde",
