@@ -32,6 +32,10 @@
 					"match": "\\b(if|else|while|for|return|and|or)\\b"
 				},
 				{
+					"name": "keyword.load.hyde",
+					"match": "\\b(load)\\b"
+				},
+				{
 					"name": "constant.language.null.hyde",
 					"match": "\\b(None)\\b"
 				},
@@ -107,7 +111,7 @@
 		"callables": {
 			"patterns": [
 				{
-					"match": "([A-Za-z_][A-Za-z0-9_]*)\\(",
+					"match": "([A-Za-z_][A-Za-z0-9_]*)(?=\\(.*\\))",
 					"name": "support.function.hyde"
 				}
 			]

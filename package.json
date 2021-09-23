@@ -2,7 +2,7 @@
     "name": "hyde-language",
     "displayName": "Hyde Language",
     "description": "Syntax highlighting for Hyde, a Python interpretation of Lox",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "publisher": "ty-porter",
     "author": "ty-porter",
     "icon": "images/CILogo.png",
