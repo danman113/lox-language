@@ -22,6 +22,9 @@
 		},
 		{
 			"include": "#digits"
+		},
+		{
+			"include": "#operators"
 		}
 	],
 	"repository": {
@@ -139,6 +142,22 @@
 				{
 					"name": "comment.line.double-slash.lox",
 					"match": "\\/\\/.*"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [				
+				{
+					"match": "(==|!=|<=?|>=?)",
+					"name": "keyword.operator.comparison.lox"
+				},
+				{
+					"match": "=",
+					"name": "keyword.operator.assignment.lox"
+				},
+				{
+					"match": "(\\+|\\-|\\*|\\/)",
+					"name": "keyword.operator.arithmetic.lox"
 				}
 			]
 		}
